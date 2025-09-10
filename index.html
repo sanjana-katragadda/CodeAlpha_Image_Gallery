@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE GALLERY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center><h1>MY IMAGE GALLERY</h1></center>
+    <div class="full-img" id="fullimgbox">
+        <img src="images/image1.jpg" alt="team-india" width="400" id="fullimg">
+        <span onclick="closeimg()">
+            X
+        </span>
+        
+
+    </div>
+    <div class="img-gallery">
+        <img src="images/image1.jpg" alt="team-india" width="250" onclick="openimg(this.src)">
+        <img src="images/image2.jpg" alt="ENE" width="250" onclick="openimg(this.src)">
+        <img src="images/image3.jpg" alt="Front-end" width="250" onclick="openimg(this.src)">
+        <img src="images/image4.jpg" alt="Graduation" width="250" onclick="openimg(this.src)">
+        <img src="images/image6.jpg" alt="Jersey" width="250" onclick="openimg(this.src)">
+        <img src="images/image7.jpg" alt="Sleepy" width="250" onclick="openimg(this.src)">
+        <img src="images/image8.jpg" alt="Shinchan" width="250" onclick="openimg(this.src)">
+        <img src="images/image9.jpg" alt="Movie"  width="250" onclick="openimg(this.src)">
+        <img src="images/image10.jpg" alt="Office" width="250" onclick="openimg(this.src)">
+        <img src="images/image11.jpg" alt="songs" width="250" onclick="openimg(this.src)">
+        <img src="images/image12.jpg" alt="jai sri ram" width="250" onclick="openimg(this.src)">
+        <img src="images/image13.jpg" alt="RO-KO" width="250" onclick="openimg(this.src)">
+        <img src="images/image14.jpg" alt="gym" width="250" onclick="openimg(this.src)">
+        <img src="images/image15.jpg" alt="internship" width="250" onclick="openimg(this.src)">
+  
+
+    </div>
+    <script>
+        var fullimgbox = document.getElementById("fullimgbox")
+        var fullimg = document.getElementById("fullimg")
+        var images = document.querySelectorAll(".img-gallery img");
+        var currentIndex = 0;
+
+
+        function openimg(picture){
+            fullimgbox.style.display = "flex";
+            fullimg.src = picture;
+        }
+        function closeimg(){
+            fullimgbox.style.display = "none";
+        }
+    </script>
+</body>
+</html>
